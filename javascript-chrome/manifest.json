@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+
+	"name": "BGU-grades",
+	"description": "תוסף לקבלת כל התפלגויות הציונים של האוניברסיטה. עדכן פרטים אישיים במסך האפשרויות של כרום, לחץ על כפתור התוסף, גש לקורס המבוקש ויתווסף לך כפתור של הורדת התפלגות. תהנה",
+	"version": "0.4",
+	"icons": { "16": "img/icon.png",
+	           "48": "img/icon.png",
+	          "128": "img/icon.png" },
+
+	"content_scripts": [
+		{
+			"matches": ["https://bgu4u.bgu.ac.il/pls/scwp/*"],
+			"js": ["js/jquery.min.js","js/injection.js"],
+			"run_at": "document_start"
+		}
+
+	],
+	"options_ui": {
+    "page": "options.html"
+  },
+	"background": {
+		"scripts": ["js/main.js"]
+  },
+	"browser_action": {
+		"default_icon": "img/icon.png"
+	},
+		"permissions": [
+		"activeTab","storage","identity", "https://stark-hollows-95485.herokuapp.com/"
+	]
+}
