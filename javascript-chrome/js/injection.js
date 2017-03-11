@@ -26,7 +26,7 @@ function postreq() {
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"url": "https://stark-hollows-95485.herokuapp.com/ServletEx",
+					"url": "https://stark-hollows-95485.herokuapp.com/grade/",
 					"method": "POST",
 					"headers": {
 						"cache-control": "no-cache",
